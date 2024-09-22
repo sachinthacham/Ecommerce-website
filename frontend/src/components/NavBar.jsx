@@ -43,16 +43,18 @@ const NavBar = () => {
     }
 
   return (
-    <div className="flex justify-around items-center p-4 shadow-sm">
+    <div className="flex justify-around items-center p-4 shadow-sm bg-slate-800 text-white">
       <div className="flex items-center gap-2">
         <img src={logo} alt="nav-logo" className="h-10 w-auto" />
-        <p className="text-gray-40 text-3xl font-semibold">SHOPPER</p>
+        <p className="text-gray-40 text-3xl font-semibold">MusicX</p>
       </div>
-      <ul className="flex gap-6 text-gray-700 font-medium">
-        <li className="hover:text-black cursor-pointer" onClick={hadleClickshop}>Shop {menu === "shop"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
-        <li className="hover:text-black cursor-pointer" onClick={hadleClickMen}>Men{menu === "men"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
-        <li className="hover:text-black cursor-pointer" onClick={hadleClickWomen}>Women{menu === "women"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
-        <li className="hover:text-black cursor-pointer" onClick={hadleClickKids}>Kids {menu === "kids"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
+      <ul className="flex gap-6 text-white font-medium text-sm">
+        <li className="hover:text-black cursor-pointer" onClick ={hadleClickshop}>Home {menu === "shop"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
+        <li className="hover:text-black cursor-pointer" onClick ={hadleClickMen}>String Instruments{menu === "men"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
+        <li className="hover:text-black cursor-pointer" onClick ={hadleClickWomen}>Wind Instruments{menu === "women"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
+        <li className="hover:text-black cursor-pointer" onClick ={hadleClickKids}>Percussion Instruments{menu === "kids"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
+        <li className="hover:text-black cursor-pointer" onClick ={hadleClickMen}>Keyboard and Digital Instruments{menu === "men"? <hr className="border-t-4 border-red-700 w-full mt-1" />: <></>}</li>
+       
       </ul>
       <div className="flex items-center gap-4">
         {localStorage.getItem('auth-token')?
